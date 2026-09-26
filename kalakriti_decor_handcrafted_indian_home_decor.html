@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KalaKriti Handcrafts — Affordable Indian Cultural Home Decor</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        saffron: {
+                            50: '#fffbf0',
+                            100: '#fef3d6',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                        },
+                        terracotta: {
+                            100: '#f9ebea',
+                            500: '#d95338',
+                            600: '#c0392b',
+                            700: '#962d22',
+                            800: '#732017',
+                        },
+                        maroon: {
+                            800: '#581c1c',
+                            900: '#3d1212',
+                        },
+                        sand: {
+                            50: '#fcfaf7',
+                            100: '#f5efea',
+                            200: '#ebdcd0',
+                            300: '#d9bfab',
+                            800: '#4a3b32',
+                            900: '#2c221b',
+                        }
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fcfaf7;
+            color: #2c221b;
+        }
+        h1, h2, h3, .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+        .bg-pattern {
+            background-color: #fcfaf7;
+            background-image: radial-gradient(#d9bfab 0.75px, transparent 0.75px), radial-gradient(#d9bfab 0.75px, #fcfaf7 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f5efea;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d95338;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-saffron-100 selection:text-terracotta-700 bg-pattern">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-terracotta-700 text-saffron-50 text-xs py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2">
+        <i data-lucide="sparkles" class="w-4 h-4 text-saffron-500 animate-pulse"></i>
+        <span>🪔 Direct From Rural Indian Artisans • Special Startup Launch Prices Under ₹999!</span>
+        <span class="hidden md:inline-block font-normal opacity-90">&bull; Extra 10% Off code: <strong class="underline text-saffron-500">DESI10</strong></span>
+    </div>
+
+    <!-- Main Header -->
+    <header class="sticky top-0 z-40 bg-sand-50/95 backdrop-blur-md border-b border-sand-200 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Brand Logo -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-terracotta-700 to-saffron-600 text-white flex items-center justify-center shadow-md shadow-terracotta-700/20 group-hover:scale-105 transition-transform">
+                        <i data-lucide="sun" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <span class="font-cinzel text-xl sm:text-2xl font-bold tracking-tight text-maroon-900 group-hover:text-terracotta-600 transition-colors">KalaKriti</span>
+                        <span class="block text-[10px] tracking-widest uppercase text-terracotta-600 font-bold -mt-1">Indian Cultural Decor</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" class="text-sm font-semibold text-sand-800 hover:text-terracotta-600 transition-colors py-1">Home</a>
+                    <a href="#shop" onclick="filterByCategory('all')" class="text-sm font-semibold text-sand-800 hover:text-terracotta-600 transition-colors py-1">Shop Collection</a>
+                    <a href="#shop" onclick="filterByCategory('festive')" class="text-sm font-semibold text-sand-800 hover:text-terracotta-600 transition-colors py-1 flex items-center gap-1">
+                        <span>Pooja & Festival</span>
+                        <span class="bg-saffron-100 text-saffron-700 text-[10px] px-1.5 py-0.5 rounded-full font-bold">Popular</span>
+                    </a>
+                    <a href="#story" class="text-sm font-semibold text-sand-800 hover:text-terracotta-600 transition-colors py-1">Our Artisan Story</a>
+                    <a href="#custom-order" class="text-sm font-semibold text-terracotta-600 hover:text-terracotta-700 transition-colors py-1 flex items-center gap-1">
+                        <i data-lucide="gift" class="w-3.5 h-3.5"></i>
+                        <span>Bulk / Custom Orders</span>
+                    </a>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="flex items-center space-x-3 sm:space-x-4">
+                    
+                    <!-- Search Input -->
+                    <div class="relative hidden sm:block w-40 lg:w-56">
+                        <input type="text" id="searchInput" oninput="handleSearch(this.value)" placeholder="Search diya, toran, brass..." class="w-full pl-9 pr-4 py-2 text-xs rounded-full bg-sand-100 border border-sand-300 text-sand-900 focus:outline-none focus:border-terracotta-500 focus:ring-1 focus:ring-terracotta-500 transition-all">
+                        <i data-lucide="search" class="w-3.5 h-3.5 text-sand-800 absolute left-3 top-1/2 -translate-y-1/2"></i>
+                    </div>
+
+                    <!-- Wishlist Trigger -->
+                    <button onclick="toggleWishlistDrawer()" class="relative p-2.5 rounded-full text-sand-800 hover:bg-sand-200 transition-colors" title="Wishlist">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                        <span id="wishlistBadge" class="absolute top-1 right-1 bg-terracotta-600 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                    </button>
+
+                    <!-- Cart Drawer Trigger -->
+                    <button onclick="toggleCartDrawer()" class="relative p-2.5 rounded-full bg-terracotta-600 hover:bg-terracotta-700 text-white transition-all shadow-md shadow-terracotta-600/20 flex items-center gap-2 px-3.5">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        <span class="text-xs font-semibold hidden sm:inline-block">Bag</span>
+                        <span id="cartBadge" class="bg-saffron-500 text-maroon-900 text-[11px] font-extrabold px-1.5 py-0.5 rounded-full">0</span>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg text-sand-800 hover:bg-sand-200">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-sand-50 border-b border-sand-200 px-6 py-4 space-y-3">
+            <div class="mb-3">
+                <input type="text" oninput="handleSearch(this.value)" placeholder="Search handmade crafts..." class="w-full px-4 py-2 text-xs rounded-lg bg-sand-100 border border-sand-300">
+            </div>
+            <a href="#home" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-sand-900 py-1.5">Home</a>
+            <a href="#shop" onclick="filterByCategory('all'); toggleMobileMenu()" class="block text-sm font-semibold text-sand-900 py-1.5">Shop All Collections</a>
+            <a href="#shop" onclick="filterByCategory('festive'); toggleMobileMenu()" class="block text-sm font-semibold text-sand-900 py-1.5">Festival & Mandir Decor</a>
+            <a href="#story" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-sand-900 py-1.5">Artisan Story</a>
+            <a href="#custom-order" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-terracotta-600 py-1.5">Custom Bulk Orders (Weddings & Return Gifts)</a>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section id="home" class="relative py-12 lg:py-20 bg-gradient-to-b from-sand-100 to-sand-50 border-b border-sand-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-saffron-100 border border-saffron-500/30 text-terracotta-700 text-xs font-bold">
+                        <span>✨ Direct-from-Artisan Craftsmanship • Budget Friendly Prices</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-cinzel font-bold text-maroon-900 leading-[1.18]">
+                        Bring Authentic <span class="text-terracotta-600 underline decoration-saffron-500">Indian Culture</span> Into Your Living Space
+                    </h1>
+
+                    <p class="text-sand-800 text-sm sm:text-base max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Handcrafted by traditional artisans across Rajasthan, Gujarat, and Bihar. From clay diyas to brass bells and Warli wall plates—transform your home at honest, pocket-friendly launch prices.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#shop" class="w-full sm:w-auto px-8 py-3.5 bg-terracotta-600 hover:bg-terracotta-700 text-white font-bold text-sm rounded-xl shadow-lg shadow-terracotta-600/25 transition-all flex items-center justify-center gap-2">
+                            <span>Explore Indian Crafts</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#custom-order" class="w-full sm:w-auto px-8 py-3.5 bg-white border border-sand-300 text-sand-900 font-bold text-sm rounded-xl hover:bg-sand-100 transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="gift" class="w-4 h-4 text-saffron-600"></i>
+                            <span>Wedding & Return Gifts</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Stats -->
+                    <div class="pt-6 border-t border-sand-200 grid grid-cols-3 gap-4 text-center lg:text-left max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <span class="block text-xl font-cinzel font-bold text-maroon-900">100%</span>
+                            <span class="text-xs text-sand-800 font-medium">Handmade in India</span>
+                        </div>
+                        <div>
+                            <span class="block text-xl font-cinzel font-bold text-maroon-900">Starting ₹149</span>
+                            <span class="text-xs text-sand-800 font-medium">Affordable Rates</span>
+                        </div>
+                        <div>
+                            <span class="block text-xl font-cinzel font-bold text-maroon-900">Pan-India</span>
+                            <span class="text-xs text-sand-800 font-medium">Safe Doorstep Delivery</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual Banner -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white relative bg-sand-200">
+                            <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=800&q=80" alt="Handcrafted Indian Terracotta Pots" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-maroon-900/60 via-transparent to-transparent"></div>
+                            
+                            <!-- Overlay Badge -->
+                            <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-sand-200 shadow-xl flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-saffron-100 text-terracotta-700 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                                    🪔
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold uppercase tracking-wider text-terracotta-600 block">Artisan Craft Highlight</span>
+                                    <h4 class="text-sm font-bold text-maroon-900">Hand-painted Rajasthani Terracotta</h4>
+                                    <p class="text-[11px] text-sand-800">Support 50+ artisan families directly.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Highlights Banner -->
+    <section class="py-10 bg-white border-b border-sand-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                
+                <div class="p-4 rounded-2xl bg-sand-50 border border-sand-200">
+                    <div class="w-10 h-10 rounded-full bg-terracotta-100 text-terracotta-700 flex items-center justify-center mx-auto mb-2">
+                        <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-maroon-900">100% Handcrafted</h4>
+                    <p class="text-xs text-sand-800 mt-1">Made with traditional love & care</p>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-sand-50 border border-sand-200">
+                    <div class="w-10 h-10 rounded-full bg-saffron-100 text-saffron-700 flex items-center justify-center mx-auto mb-2">
+                        <i data-lucide="tag" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-maroon-900">Honest Low Prices</h4>
+                    <p class="text-xs text-sand-800 mt-1">Direct from makers, no middlemen</p>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-sand-50 border border-sand-200">
+                    <div class="w-10 h-10 rounded-full bg-terracotta-100 text-terracotta-700 flex items-center justify-center mx-auto mb-2">
+                        <i data-lucide="truck" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-maroon-900">Safe Shipping</h4>
+                    <p class="text-xs text-sand-800 mt-1">Breakage-safe bubble packing</p>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-sand-50 border border-sand-200">
+                    <div class="w-10 h-10 rounded-full bg-saffron-100 text-saffron-700 flex items-center justify-center mx-auto mb-2">
+                        <i data-lucide="shield-check" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-maroon-900">UPI & Cash on Delivery</h4>
+                    <p class="text-xs text-sand-800 mt-1">GPay, PhonePe, Paytm accepted</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN PRODUCT CATALOG SECTION -->
+    <section id="shop" class="py-16 bg-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Title -->
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs font-bold uppercase tracking-widest text-terracotta-600">Traditional Craft Catalog</span>
+                <h2 class="text-3xl sm:text-4xl font-cinzel font-bold text-maroon-900 mt-1">Handmade Cultural Home Decor</h2>
+                <p class="text-sand-800 text-xs sm:text-sm mt-2">Elevate your living room, pooja room, or entrance doorway with authentic Indian heritage.</p>
+            </div>
+
+            <!-- Filter Buttons & Controls -->
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-8 pb-6 border-b border-sand-300">
+                
+                <!-- Category Pills -->
+                <div class="flex flex-wrap items-center gap-2 w-full md:w-auto">
+                    <button onclick="filterByCategory('all')" id="cat-all" class="cat-pill active px-4 py-2 text-xs font-bold rounded-full bg-terracotta-600 text-white transition-all shadow-sm">All Products</button>
+                    <button onclick="filterByCategory('wall')" id="cat-wall" class="cat-pill px-4 py-2 text-xs font-bold rounded-full bg-sand-100 text-sand-900 border border-sand-300 hover:bg-sand-200 transition-all">Wall Decor & Torans</button>
+                    <button onclick="filterByCategory('festive')" id="cat-festive" class="cat-pill px-4 py-2 text-xs font-bold rounded-full bg-sand-100 text-sand-900 border border-sand-300 hover:bg-sand-200 transition-all">Pooja & Mandir Diyas</button>
+                    <button onclick="filterByCategory('brass')" id="cat-brass" class="cat-pill px-4 py-2 text-xs font-bold rounded-full bg-sand-100 text-sand-900 border border-sand-300 hover:bg-sand-200 transition-all">Brass & Metal Craft</button>
+                    <button onclick="filterByCategory('table')" id="cat-table" class="cat-pill px-4 py-2 text-xs font-bold rounded-full bg-sand-100 text-sand-900 border border-sand-300 hover:bg-sand-200 transition-all">Coasters & Tableware</button>
+                </div>
+
+                <!-- Sort Dropdown -->
+                <div class="flex items-center gap-2 w-full md:w-auto justify-end">
+                    <span class="text-xs text-sand-800 font-semibold whitespace-nowrap">Sort By:</span>
+                    <select id="sortSelect" onchange="handleSort(this.value)" class="text-xs bg-white border border-sand-300 text-sand-900 py-2 px-3 rounded-xl focus:outline-none focus:border-terracotta-500">
+                        <option value="popular">Popularity</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="discount">Highest Discount</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <!-- Product Grid -->
+            <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                <!-- Dynamically injected product cards -->
+            </div>
+
+            <!-- Empty Store State -->
+            <div id="emptyState" class="hidden text-center py-16">
+                <i data-lucide="package-search" class="w-12 h-12 text-sand-400 mx-auto mb-3"></i>
+                <h3 class="text-lg font-bold text-maroon-900">No Cultural Decor Items Found</h3>
+                <p class="text-xs text-sand-800 mt-1">Try searching for other terms like 'diya', 'brass', 'toran', or 'coaster'.</p>
+                <button onclick="filterByCategory('all')" class="mt-4 px-4 py-2 bg-terracotta-600 text-white text-xs font-bold rounded-lg">View All Items</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ARTISAN STORY SECTION -->
+    <section id="story" class="py-16 bg-sand-100 border-y border-sand-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Story Image Grid -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="rounded-2xl overflow-hidden shadow-lg aspect-square">
+                        <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=600&q=80" alt="Pottery Artisan shaping clay" class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg aspect-square bg-terracotta-800 text-saffron-50 p-6 flex flex-col justify-between">
+                        <i data-lucide="quote" class="w-8 h-8 text-saffron-500"></i>
+                        <p class="font-cinzel italic text-xs sm:text-sm leading-relaxed">
+                            "When you bring a KalaKriti item home, you preserve centuries of Indian folk art and empower rural women artisans."
+                        </p>
+                        <span class="text-[11px] font-bold text-saffron-200">— Smt. Sunita Devi, Master Artisan</span>
+                    </div>
+                </div>
+
+                <!-- Story Text Content -->
+                <div class="space-y-5">
+                    <span class="text-xs font-bold uppercase tracking-widest text-terracotta-600">Why Choose KalaKriti?</span>
+                    <h2 class="text-3xl font-cinzel font-bold text-maroon-900 leading-tight">
+                        Empowering Rural Artisans with Honest, Affordable Prices
+                    </h2>
+                    <p class="text-sand-800 text-xs sm:text-sm leading-relaxed">
+                        KalaKriti started with a simple belief: beautiful traditional Indian decor shouldn't be overpriced. We work directly with cluster artisans in rural India, cutting out commercial distributors so you get genuine handmade heritage pieces at fair, direct prices.
+                    </p>
+
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-terracotta-100 text-terracotta-700 flex items-center justify-center flex-shrink-0 font-bold text-xs">01</div>
+                            <div>
+                                <h4 class="font-bold text-xs text-maroon-900">Direct-to-Consumer Prices</h4>
+                                <p class="text-[11px] text-sand-800">No middleman markups. Up to 50% lower prices compared to big retail stores.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-saffron-100 text-saffron-700 flex items-center justify-center flex-shrink-0 font-bold text-xs">02</div>
+                            <div>
+                                <h4 class="font-bold text-xs text-maroon-900">100% Eco-Friendly & Sustainable</h4>
+                                <p class="text-[11px] text-sand-800">Natural terracotta clay, brass metals, jute fibers, and non-toxic herbal dyes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CUSTOM BULK / WEDDING ORDER FORM -->
+    <section id="custom-order" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-sand-50 rounded-3xl p-8 sm:p-12 border border-sand-300 shadow-xl relative overflow-hidden">
+                <div class="text-center max-w-xl mx-auto mb-8">
+                    <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-saffron-100 text-terracotta-700 text-xs font-bold">
+                        <i data-lucide="gift" class="w-3.5 h-3.5"></i>
+                        <span>Weddings & Festival Return Gifts</span>
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-cinzel font-bold text-maroon-900 mt-2">Need Bulk Handmade Decor?</h2>
+                    <p class="text-sand-800 text-xs mt-2">Get special wholesale discount pricing on custom corporate gifts, housewarming return gifts, or wedding favors!</p>
+                </div>
+
+                <form onsubmit="handleCustomOrder(event)" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-sand-800 mb-1">Your Name *</label>
+                            <input type="text" required placeholder="e.g. Ramesh Sharma" class="w-full px-4 py-2.5 rounded-xl border border-sand-300 text-xs bg-white focus:outline-none focus:border-terracotta-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-sand-800 mb-1">WhatsApp / Phone Number *</label>
+                            <input type="tel" required placeholder="+91 98765 43210" class="w-full px-4 py-2.5 rounded-xl border border-sand-300 text-xs bg-white focus:outline-none focus:border-terracotta-500">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-sand-800 mb-1">Event Type</label>
+                            <select class="w-full px-4 py-2.5 rounded-xl border border-sand-300 text-xs bg-white focus:outline-none focus:border-terracotta-500">
+                                <option value="wedding">Wedding / Sangeet Return Gifts</option>
+                                <option value="housewarming">Griha Pravesh / Housewarming</option>
+                                <option value="festival">Diwali / Festival Bulk Order</option>
+                                <option value="corporate">Corporate Ethnic Gifting</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-sand-800 mb-1">Estimated Quantity</label>
+                            <select class="w-full px-4 py-2.5 rounded-xl border border-sand-300 text-xs bg-white focus:outline-none focus:border-terracotta-500">
+                                <option value="20-50">20 to 50 pieces</option>
+                                <option value="50-100">50 to 100 pieces</option>
+                                <option value="100+">100+ pieces (Extra Discount)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-sand-800 mb-1">Requirement Details</label>
+                        <textarea rows="3" placeholder="Tell us which items you like or budget per gift..." class="w-full px-4 py-2.5 rounded-xl border border-sand-300 text-xs bg-white focus:outline-none focus:border-terracotta-500"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-3 bg-terracotta-600 hover:bg-terracotta-700 text-white font-bold text-xs rounded-xl shadow-md transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="send" class="w-4 h-4"></i>
+                        <span>Get Wholesale Price Quote on WhatsApp</span>
+                    </button>
+                </form>
+
+                <div id="customToast" class="hidden mt-4 p-3 bg-emerald-100 border border-emerald-300 text-emerald-800 text-xs font-semibold rounded-xl text-center">
+                    ✅ Thank you! Our team will contact you on WhatsApp within 2 hours with wholesale rates.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE-OUT CART DRAWER -->
+    <div id="cartDrawer" class="fixed inset-0 z-50 hidden">
+        <div onclick="toggleCartDrawer()" class="absolute inset-0 bg-maroon-900/50 backdrop-blur-sm"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-full max-w-md bg-sand-50 shadow-2xl flex flex-col justify-between z-10">
+            
+            <!-- Header -->
+            <div class="p-5 border-b border-sand-200 flex items-center justify-between bg-white">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="shopping-bag" class="w-5 h-5 text-terracotta-600"></i>
+                    <h3 class="font-cinzel font-bold text-lg text-maroon-900">Your Shopping Bag</h3>
+                </div>
+                <button onclick="toggleCartDrawer()" class="p-2 rounded-full hover:bg-sand-200 text-sand-800">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- Free Shipping Progress -->
+            <div class="px-5 py-2.5 bg-saffron-50 border-b border-saffron-100 text-xs">
+                <p id="shippingStatus" class="text-terracotta-700 font-bold mb-1">Add ₹499 for Free Home Delivery!</p>
+                <div class="w-full bg-saffron-200 h-2 rounded-full overflow-hidden">
+                    <div id="shippingBar" class="bg-terracotta-600 h-full w-0 transition-all duration-300"></div>
+                </div>
+            </div>
+
+            <!-- Cart Items List -->
+            <div id="cartList" class="flex-grow overflow-y-auto p-5 space-y-3">
+                <!-- Cart items rendered here -->
+            </div>
+
+            <!-- Checkout Summary -->
+            <div class="p-5 border-t border-sand-200 bg-white space-y-3">
+                <div class="space-y-1 text-xs">
+                    <div class="flex justify-between text-sand-800">
+                        <span>Subtotal</span>
+                        <span id="cartSubtotal" class="font-bold text-maroon-900">₹0</span>
+                    </div>
+                    <div class="flex justify-between text-sand-800">
+                        <span>Delivery Fee</span>
+                        <span id="cartDelivery" class="font-bold text-emerald-600">FREE</span>
+                    </div>
+                    <div class="flex justify-between text-sm font-bold text-maroon-900 pt-2 border-t border-sand-100">
+                        <span>Grand Total</span>
+                        <span id="cartTotal" class="text-terracotta-600">₹0</span>
+                    </div>
+                </div>
+
+                <button onclick="openCheckoutModal()" class="w-full py-3.5 bg-terracotta-600 hover:bg-terracotta-700 text-white font-bold text-xs rounded-xl shadow-lg transition-all flex items-center justify-center gap-2">
+                    <i data-lucide="lock" class="w-4 h-4"></i>
+                    <span>Proceed to Order (UPI / COD)</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- WISHLIST DRAWER -->
+    <div id="wishlistDrawer" class="fixed inset-0 z-50 hidden">
+        <div onclick="toggleWishlistDrawer()" class="absolute inset-0 bg-maroon-900/50 backdrop-blur-sm"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-full max-w-md bg-sand-50 shadow-2xl flex flex-col justify-between z-10">
+            <div class="p-5 border-b border-sand-200 flex items-center justify-between bg-white">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="heart" class="w-5 h-5 text-terracotta-600"></i>
+                    <h3 class="font-cinzel font-bold text-lg text-maroon-900">Saved Wishlist</h3>
+                </div>
+                <button onclick="toggleWishlistDrawer()" class="p-2 rounded-full hover:bg-sand-200 text-sand-800">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div id="wishlistList" class="flex-grow overflow-y-auto p-5 space-y-3">
+                <!-- Wishlist items -->
+            </div>
+        </div>
+    </div>
+
+    <!-- QUICK VIEW MODAL -->
+    <div id="quickViewModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
+        <div onclick="closeQuickView()" class="absolute inset-0 bg-maroon-900/60 backdrop-blur-sm"></div>
+        <div class="relative bg-white rounded-3xl max-w-2xl w-full p-6 overflow-hidden shadow-2xl z-10 border border-sand-300">
+            <button onclick="closeQuickView()" class="absolute top-4 right-4 p-2 rounded-full bg-sand-100 text-sand-800 hover:bg-sand-200">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div id="quickViewContent" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Modal Content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- CHECKOUT ORDER MODAL -->
+    <div id="checkoutModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
+        <div onclick="closeCheckoutModal()" class="absolute inset-0 bg-maroon-900/60 backdrop-blur-sm"></div>
+        <div class="relative bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl z-10 border border-sand-300">
+            <button onclick="closeCheckoutModal()" class="absolute top-4 right-4 p-2 rounded-full bg-sand-100 text-sand-800">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div class="text-center mb-4">
+                <span class="text-2xl">📦</span>
+                <h3 class="font-cinzel font-bold text-lg text-maroon-900">Confirm Doorstep Delivery</h3>
+                <p class="text-xs text-sand-800">Pay via Google Pay, PhonePe, Paytm or Cash on Delivery</p>
+            </div>
+            <form onsubmit="handlePlaceOrder(event)" class="space-y-3 text-xs">
+                <input type="text" required placeholder="Full Name *" class="w-full px-3.5 py-2.5 rounded-xl border border-sand-300">
+                <input type="tel" required placeholder="Mobile Number for Order Updates *" class="w-full px-3.5 py-2.5 rounded-xl border border-sand-300">
+                <textarea required placeholder="Full Delivery Address (House No, Street, Pincode) *" rows="2" class="w-full px-3.5 py-2.5 rounded-xl border border-sand-300"></textarea>
+                
+                <div class="pt-2">
+                    <label class="block font-bold text-sand-800 mb-1">Select Payment Method</label>
+                    <div class="grid grid-cols-2 gap-2">
+                        <label class="flex items-center gap-2 p-2.5 border rounded-xl bg-sand-50 cursor-pointer">
+                            <input type="radio" name="payMethod" value="upi" checked>
+                            <span class="font-bold">UPI / PhonePe / GPay</span>
+                        </label>
+                        <label class="flex items-center gap-2 p-2.5 border rounded-xl bg-sand-50 cursor-pointer">
+                            <input type="radio" name="payMethod" value="cod">
+                            <span class="font-bold">Cash on Delivery</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full py-3 bg-terracotta-600 hover:bg-terracotta-700 text-white font-bold text-xs rounded-xl mt-3 shadow-md">
+                    Place Order Now
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-maroon-900 text-sand-200 pt-12 pb-8 border-t-4 border-saffron-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-maroon-800">
+                
+                <!-- Brand Info -->
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-full bg-saffron-500 text-maroon-900 flex items-center justify-center font-bold">
+                            🪔
+                        </div>
+                        <span class="font-cinzel text-lg font-bold text-white">KalaKriti</span>
+                    </div>
+                    <p class="text-xs text-sand-300 leading-relaxed">
+                        Handcrafted Indian cultural decor directly from traditional artisans. Authentic, rustic, and budget friendly.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-cinzel font-bold text-white text-xs uppercase tracking-wider mb-3">Categories</h4>
+                    <ul class="space-y-2 text-xs text-sand-300">
+                        <li><a href="#shop" onclick="filterByCategory('festive')" class="hover:text-saffron-500">Terracotta Diyas & Mandir</a></li>
+                        <li><a href="#shop" onclick="filterByCategory('wall')" class="hover:text-saffron-500">Madhubani Wall Plates</a></li>
+                        <li><a href="#shop" onclick="filterByCategory('brass')" class="hover:text-saffron-500">Brass Craft Statues</a></li>
+                        <li><a href="#shop" onclick="filterByCategory('table')" class="hover:text-saffron-500">Hand-carved Coasters</a></li>
+                    </ul>
+                </div>
+
+                <!-- Customer Care -->
+                <div>
+                    <h4 class="font-cinzel font-bold text-white text-xs uppercase tracking-wider mb-3">Artisan Care</h4>
+                    <ul class="space-y-2 text-xs text-sand-300">
+                        <li><a href="#story" class="hover:text-saffron-500">About Artisan Clusters</a></li>
+                        <li><a href="#custom-order" class="hover:text-saffron-500">Bulk & Wedding Orders</a></li>
+                        <li><a href="#" onclick="alert('Shipping Policy: Delivered safely across India within 4-7 days.')" class="hover:text-saffron-500">Shipping & Returns</a></li>
+                    </ul>
+                </div>
+
+                <!-- Accepted Payment Modes -->
+                <div>
+                    <h4 class="font-cinzel font-bold text-white text-xs uppercase tracking-wider mb-3">Easy Payments Accepted</h4>
+                    <p class="text-xs text-sand-300 mb-3">Pay easily via GPay, PhonePe, Paytm, Cards & COD</p>
+                    <div class="flex flex-wrap gap-2 text-xs font-bold">
+                        <span class="px-2.5 py-1 bg-maroon-800 text-saffron-100 rounded-md">BHIM UPI</span>
+                        <span class="px-2.5 py-1 bg-maroon-800 text-saffron-100 rounded-md">Google Pay</span>
+                        <span class="px-2.5 py-1 bg-maroon-800 text-saffron-100 rounded-md">PhonePe</span>
+                        <span class="px-2.5 py-1 bg-maroon-800 text-saffron-100 rounded-md">Paytm</span>
+                        <span class="px-2.5 py-1 bg-maroon-800 text-saffron-100 rounded-md">COD</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-6 text-center text-xs text-sand-400">
+                © 2026 KalaKriti Handcrafts. Handcrafted with ❤️ in India.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Affordable Indian Cultural Products Data
+        const PRODUCTS = [
+            {
+                id: 1,
+                name: "Hand-painted Terracotta Diya Set (Set of 6)",
+                category: "festive",
+                price: 199,
+                mrp: 399,
+                discount: "50% OFF",
+                rating: 4.9,
+                reviews: 84,
+                image: "https://images.unsplash.com/photo-1605883705077-8d3d3f237303?auto=format&fit=crop&w=600&q=80",
+                state: "Rajasthan Craft",
+                description: "Vibrant clay diyas hand-painted by artisan women in Jaipur using organic water colors. Ideal for Diwali and Mandir pooja."
+            },
+            {
+                id: 2,
+                name: "Traditional Brass Hanging Peacock Bell",
+                category: "brass",
+                price: 499,
+                mrp: 899,
+                discount: "44% OFF",
+                rating: 4.8,
+                reviews: 42,
+                image: "https://images.unsplash.com/photo-1544457070-4cd773b4d71e?auto=format&fit=crop&w=600&q=80",
+                state: "Uttar Pradesh Brasswork",
+                description: "Pure solid brass temple bell with intricate peacock design. Produces a serene chime for house entrances."
+            },
+            {
+                id: 3,
+                name: "Madhubani Art Wall Hanging Plate (10-inch)",
+                category: "wall",
+                price: 349,
+                mrp: 699,
+                discount: "50% OFF",
+                rating: 5.0,
+                reviews: 56,
+                image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80",
+                state: "Mithila Bihar Craft",
+                description: "Hand-drawn traditional Madhubani peacock motif on solid terracotta disc with wall hook attached."
+            },
+            {
+                id: 4,
+                name: "Hand-carved Wooden Coasters (Set of 4)",
+                category: "table",
+                price: 249,
+                mrp: 499,
+                discount: "50% OFF",
+                rating: 4.7,
+                reviews: 29,
+                image: "https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=600&q=80",
+                state: "Saharanpur Woodcraft",
+                description: "Carved out of natural sheesham wood with brass inlay floral art. Protects table surfaces with style."
+            },
+            {
+                id: 5,
+                name: "Marigold Floral Door Bandhanwar / Toran",
+                category: "wall",
+                price: 299,
+                mrp: 599,
+                discount: "50% OFF",
+                rating: 4.9,
+                reviews: 67,
+                image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=600&q=80",
+                state: "Gujarat Textile Craft",
+                description: "Hand-woven entrance toran featuring faux marigold flowers, gota patti work, and auspicious brass bells."
+            },
+            {
+                id: 6,
+                name: "Miniature Brass Ganesha Statue",
+                category: "brass",
+                price: 399,
+                mrp: 799,
+                discount: "50% OFF",
+                rating: 4.9,
+                reviews: 91,
+                image: "https://images.unsplash.com/photo-1606744888344-493238951221?auto=format&fit=crop&w=600&q=80",
+                state: "Moradabad Craft",
+                description: "Hand-carved solid brass Lord Ganesha idol for car dashboards, study tables, or home temple altars."
+            },
+            {
+                id: 7,
+                name: "Jute Fiber Natural Planter Basket",
+                category: "table",
+                price: 279,
+                mrp: 499,
+                discount: "44% OFF",
+                rating: 4.8,
+                reviews: 38,
+                image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=600&q=80",
+                state: "West Bengal Craft",
+                description: "Eco-friendly handwoven golden jute basket to showcase indoor house plants or keep pooja items organized."
+            },
+            {
+                id: 8,
+                name: "Warli Folk Tribal Art Decorative Clay Pot",
+                category: "festive",
+                price: 329,
+                mrp: 649,
+                discount: "49% OFF",
+                rating: 4.9,
+                reviews: 44,
+                image: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=600&q=80",
+                state: "Maharashtra Tribal Craft",
+                description: "Authentic white-ink Warli tribal dancing figures painted over a terracotta red background vase."
+            }
+        ];
+
+        // State variables
+        let cart = [];
+        let wishlist = [];
+        let currentCategory = 'all';
+        let searchQuery = '';
+
+        window.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            renderProducts();
+        });
+
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+
+        function filterByCategory(cat) {
+            currentCategory = cat;
+            document.querySelectorAll('.cat-pill').forEach(btn => {
+                btn.classList.remove('bg-terracotta-600', 'text-white');
+                btn.classList.add('bg-sand-100', 'text-sand-900');
+            });
+            const activeBtn = document.getElementById('cat-' + cat);
+            if(activeBtn) {
+                activeBtn.classList.add('bg-terracotta-600', 'text-white');
+                activeBtn.classList.remove('bg-sand-100', 'text-sand-900');
+            }
+            renderProducts();
+        }
+
+        function handleSearch(val) {
+            searchQuery = val.toLowerCase().trim();
+            renderProducts();
+        }
+
+        function handleSort(type) {
+            if (type === 'price-low') PRODUCTS.sort((a,b) => a.price - b.price);
+            else if (type === 'price-high') PRODUCTS.sort((a,b) => b.price - a.price);
+            else if (type === 'discount') PRODUCTS.sort((a,b) => b.mrp - b.price - (a.mrp - a.price));
+            else PRODUCTS.sort((a,b) => a.id - b.id);
+            renderProducts();
+        }
+
+        function renderProducts() {
+            const grid = document.getElementById('productGrid');
+            const empty = document.getElementById('emptyState');
+            grid.innerHTML = '';
+
+            const filtered = PRODUCTS.filter(p => {
+                const matchCat = (currentCategory === 'all' || p.category === currentCategory);
+                const matchSearch = p.name.toLowerCase().includes(searchQuery) || p.description.toLowerCase().includes(searchQuery);
+                return matchCat && matchSearch;
+            });
+
+            if (filtered.length === 0) {
+                empty.classList.remove('hidden');
+            } else {
+                empty.classList.add('hidden');
+                filtered.forEach(p => {
+                    const isWish = wishlist.includes(p.id);
+                    const card = document.createElement('div');
+                    card.className = "bg-white rounded-2xl border border-sand-300 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group";
+                    card.innerHTML = `
+                        <div>
+                            <div class="relative aspect-square bg-sand-100 overflow-hidden cursor-pointer" onclick="openQuickView(${p.id})">
+                                <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                
+                                <span class="absolute top-3 left-3 bg-terracotta-600 text-white font-bold text-[10px] px-2.5 py-1 rounded-full uppercase">
+                                    ${p.discount}
+                                </span>
+
+                                <button onclick="event.stopPropagation(); toggleWishlist(${p.id})" class="absolute top-3 right-3 p-2 rounded-full bg-white/90 text-sand-800 hover:text-terracotta-600 transition-colors shadow">
+                                    <i data-lucide="heart" class="w-4 h-4 ${isWish ? 'fill-terracotta-600 text-terracotta-600' : ''}"></i>
+                                </button>
+                            </div>
+
+                            <div class="p-4">
+                                <span class="text-[10px] font-bold text-terracotta-600 uppercase tracking-wider">${p.state}</span>
+                                <h3 onclick="openQuickView(${p.id})" class="font-cinzel font-bold text-sm text-maroon-900 line-clamp-1 hover:text-terracotta-600 cursor-pointer mt-0.5">
+                                    ${p.name}
+                                </h3>
+                                
+                                <div class="flex items-center gap-1 text-amber-500 text-xs mt-1">
+                                    <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500"></i>
+                                    <span class="font-bold text-sand-900">${p.rating}</span>
+                                    <span class="text-sand-800 text-[10px]">(${p.reviews})</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="px-4 pb-4 flex items-center justify-between border-t border-sand-100 pt-3">
+                            <div>
+                                <span class="text-xs text-sand-800 line-through">₹${p.mrp}</span>
+                                <span class="text-base font-bold text-maroon-900 ml-1">₹${p.price}</span>
+                            </div>
+
+                            <button onclick="addToCart(${p.id})" class="px-3.5 py-2 bg-terracotta-600 hover:bg-terracotta-700 text-white font-bold text-xs rounded-xl transition-all flex items-center gap-1 shadow-sm">
+                                <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+                                <span>Add</span>
+                            </button>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+            }
+            lucide.createIcons();
+        }
+
+        // Cart Actions
+        function addToCart(pId) {
+            const item = cart.find(i => i.id === pId);
+            if(item) {
+                item.qty++;
+            } else {
+                const prod = PRODUCTS.find(p => p.id === pId);
+                cart.push({ ...prod, qty: 1 });
+            }
+            updateCart();
+            toggleCartDrawer(true);
+        }
+
+        function updateCartQty(pId, delta) {
+            const idx = cart.findIndex(i => i.id === pId);
+            if (idx !== -1) {
+                cart[idx].qty += delta;
+                if (cart[idx].qty <= 0) cart.splice(idx, 1);
+            }
+            updateCart();
+        }
+
+        function updateCart() {
+            const count = cart.reduce((s, i) => s + i.qty, 0);
+            const subtotal = cart.reduce((s, i) => s + (i.price * i.qty), 0);
+
+            document.getElementById('cartBadge').innerText = count;
+            document.getElementById('cartSubtotal').innerText = `₹${subtotal}`;
+            document.getElementById('cartTotal').innerText = `₹${subtotal}`;
+
+            const bar = document.getElementById('shippingBar');
+            const status = document.getElementById('shippingStatus');
+            if(subtotal >= 499) {
+                status.innerText = "🎉 You've unlocked FREE Delivery!";
+                bar.style.width = '100%';
+            } else {
+                const remain = 499 - subtotal;
+                status.innerText = `Add ₹${remain} more for Free Delivery!`;
+                bar.style.width = `${Math.min(100, (subtotal/499)*100)}%`;
+            }
+
+            const list = document.getElementById('cartList');
+            if(cart.length === 0) {
+                list.innerHTML = `<div class="text-center py-10 text-sand-800 text-xs">Your bag is empty. Explore our handcrafted collection!</div>`;
+            } else {
+                list.innerHTML = '';
+                cart.forEach(i => {
+                    const row = document.createElement('div');
+                    row.className = "flex items-center gap-3 bg-white p-3 rounded-xl border border-sand-200";
+                    row.innerHTML = `
+                        <img src="${i.image}" class="w-12 h-12 rounded-lg object-cover">
+                        <div class="flex-grow">
+                            <h4 class="font-bold text-xs text-maroon-900 line-clamp-1">${i.name}</h4>
+                            <span class="text-xs font-bold text-terracotta-600">₹${i.price}</span>
+                            <div class="flex items-center gap-2 mt-1">
+                                <button onclick="updateCartQty(${i.id}, -1)" class="w-5 h-5 bg-sand-100 rounded text-xs font-bold">-</button>
+                                <span class="text-xs font-bold">${i.qty}</span>
+                                <button onclick="updateCartQty(${i.id}, 1)" class="w-5 h-5 bg-sand-100 rounded text-xs font-bold">+</button>
+                            </div>
+                        </div>
+                        <span class="font-bold text-xs text-maroon-900">₹${i.price * i.qty}</span>
+                    `;
+                    list.appendChild(row);
+                });
+            }
+            lucide.createIcons();
+        }
+
+        function toggleCartDrawer(forceOpen = false) {
+            const drawer = document.getElementById('cartDrawer');
+            if(forceOpen) drawer.classList.remove('hidden');
+            else drawer.classList.toggle('hidden');
+        }
+
+        // Wishlist Actions
+        function toggleWishlist(pId) {
+            const idx = wishlist.indexOf(pId);
+            if(idx === -1) wishlist.push(pId);
+            else wishlist.splice(idx, 1);
+            document.getElementById('wishlistBadge').innerText = wishlist.length;
+            renderProducts();
+            updateWishlist();
+        }
+
+        function updateWishlist() {
+            const list = document.getElementById('wishlistList');
+            if(wishlist.length === 0) {
+                list.innerHTML = `<div class="text-center py-10 text-sand-800 text-xs">No saved items yet.</div>`;
+            } else {
+                list.innerHTML = '';
+                wishlist.forEach(id => {
+                    const p = PRODUCTS.find(item => item.id === id);
+                    if (!p) return;
+                    const card = document.createElement('div');
+                    card.className = "flex items-center justify-between bg-white p-3 rounded-xl border border-sand-200";
+                    card.innerHTML = `
+                        <div class="flex items-center gap-3">
+                            <img src="${p.image}" class="w-10 h-10 rounded-lg object-cover">
+                            <div>
+                                <h4 class="font-bold text-xs text-maroon-900 line-clamp-1">${p.name}</h4>
+                                <span class="text-xs font-bold text-terracotta-600">₹${p.price}</span>
+                            </div>
+                        </div>
+                        <button onclick="addToCart(${p.id}); toggleWishlist(${p.id})" class="px-3 py-1 bg-terracotta-600 text-white text-xs font-bold rounded-lg">
+                            Move to Bag
+                        </button>
+                    `;
+                    list.appendChild(card);
+                });
+            }
+        }
+
+        function toggleWishlistDrawer() {
+            document.getElementById('wishlistDrawer').classList.toggle('hidden');
+        }
+
+        // Modal Handlers
+        function openQuickView(pId) {
+            const p = PRODUCTS.find(i => i.id === pId);
+            if (!p) return;
+            const content = document.getElementById('quickViewContent');
+            content.innerHTML = `
+                <div class="aspect-square bg-sand-100 rounded-2xl overflow-hidden border border-sand-200">
+                    <img src="${p.image}" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-terracotta-600 uppercase">${p.state}</span>
+                        <h3 class="font-cinzel font-bold text-xl text-maroon-900 mt-1">${p.name}</h3>
+                        <div class="flex items-center gap-2 mt-2 text-xs">
+                            <span class="text-sand-800 font-bold">⭐ ${p.rating} (${p.reviews} reviews)</span>
+                        </div>
+                        <p class="text-xs text-sand-800 mt-3 leading-relaxed">${p.description}</p>
+                    </div>
+
+                    <div class="pt-4 border-t border-sand-100 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-sand-800 line-through">₹${p.mrp}</span>
+                            <span class="text-xl font-bold text-maroon-900 ml-1">₹${p.price}</span>
+                        </div>
+                        <button onclick="addToCart(${p.id}); closeQuickView()" class="px-5 py-2.5 bg-terracotta-600 hover:bg-terracotta-700 text-white font-bold text-xs rounded-xl shadow">
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            `;
+            document.getElementById('quickViewModal').classList.remove('hidden');
+            lucide.createIcons();
+        }
+
+        function closeQuickView() {
+            document.getElementById('quickViewModal').classList.add('hidden');
+        }
+
+        function openCheckoutModal() {
+            if(cart.length === 0) {
+                alert("Please add items to your bag before checking out!");
+                return;
+            }
+            toggleCartDrawer();
+            document.getElementById('checkoutModal').classList.remove('hidden');
+        }
+
+        function closeCheckoutModal() {
+            document.getElementById('checkoutModal').classList.add('hidden');
+        }
+
+        function handleCustomOrder(e) {
+            e.preventDefault();
+            document.getElementById('customToast').classList.remove('hidden');
+            e.target.reset();
+        }
+
+        function handlePlaceOrder(e) {
+            e.preventDefault();
+            alert("🎉 Namaste! Your order has been placed successfully. Our artisan team will pack your items safely with love!");
+            cart = [];
+            updateCart();
+            closeCheckoutModal();
+        }
+    </script>
+</body>
+</html>
